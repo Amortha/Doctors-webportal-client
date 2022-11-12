@@ -7,7 +7,7 @@ const Dental = () => {
           <figure><img className='w-9/12 ' src={Treatment} alt="Movie"/></figure>
           </div>
        
-        <div className="lg:mt-32 ">
+        <div className="lg:mt-32 p-4">
           <h2 className="card-title text-5xl">Exceptional Dental care, on Your Terms</h2>
           <p className='text-xl my-8'>Get Results for Dental Clinic Los Angeles. Find Quick Results from Multiple Sources. 
             Search for Dental Clinic Los Angeles and Discover Millions of Results. Multiple Sources Combined. 
