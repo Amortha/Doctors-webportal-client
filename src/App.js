@@ -6,17 +6,22 @@ import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login/Login";
 import SignUp from "./Pages/Login/SignUp";
 import Navbar from './Pages/Shared/Navbar';
+import RequireAuth from "./Pages/Shared/RequireAuth";
 
 function App() {
   return (
     <div className="max-w-7xl mx-auto px-12">
-    <Navbar></Navbar>
-    <Routes>
-        <Route path="/" element={<Home/>} />
+      <Navbar></Navbar>
+      <Routes>
+        <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
-        <Route path="appointment" element={<Appointment/>} />
-        <Route path="login" element={<Login/>} />
-        <Route path="signup" element={<SignUp/>} />
+        <Route path="appointment" element={
+          <RequireAuth>
+            <Appointment />
+          </RequireAuth>
+        } />
+        <Route path="login" element={<Login />} />
+        <Route path="signup" element={<SignUp />} />
       </Routes>
     </div>
   );
