@@ -12,7 +12,7 @@ const MyAppointments = () => {
 
     useEffect(() => {
         if (user) {
-            fetch(`https://doctor-webportal.onrender.com/booking?patient=${user.email}`, {
+            fetch(`http://localhost:5000/booking?patient=${user.email}`, {
                 method: 'GET',
                 headers: {
                     'authorization': `Bearer ${localStorage.getItem('accessToken')}`

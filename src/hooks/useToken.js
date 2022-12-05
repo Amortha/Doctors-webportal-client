@@ -8,7 +8,7 @@ const useToken = user =>{
    const currentUser = {email:email}
 
 if(email){
-    fetch(`https://doctor-webportal.onrender.com/user/${email}`,{
+    fetch(`http://localhost:5000/user/${email}`,{
         method:'put',
         headers:{
             'content-type':'application/json'
