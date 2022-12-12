@@ -5,7 +5,6 @@ import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
 import Loading from '../Shared/Loading';
 import CheckoutForm from './CheckoutForm';
-import Checkoutform from './CheckoutForm';
 
 const stripePromise = loadStripe('pk_test_51MDsIyAYUl9xJn4VeQqRi2Rc4k0ypgszcItcQTcsaCH6LksTJ24Q1g7tqujBc1c576URtpSXDtOqG7lzJvNypDmZ00gXLu1GGW');
 
@@ -19,6 +18,7 @@ const Payment = () => {
             'authorization': `Bearer ${localStorage.getItem('accessToken')}`
         }
     }).then(res=>res.json()));
+
     if(isLoading){
        return <Loading></Loading>
     }
@@ -36,7 +36,7 @@ const Payment = () => {
     <div className="card flex-shrink-0 w-50 mt-24 max-w-md shadow-2xl bg-base-100">
       <div className="card-body">
       <Elements stripe={stripePromise}>
-      <CheckoutForm />
+      <CheckoutForm appointment={appointment} />
     </Elements>
        
       </div>
