@@ -26,7 +26,7 @@ const BookingModal = ({ date, treatment, seTreatment,refetch }) => {
       phone: event.target.phone.value
     }
 
-    fetch('http://localhost:5000/booking',{
+    fetch('https://doctor-webportal.onrender.com/booking',{
       method:'post',
       headers:{
         'content-type': 'application/json'

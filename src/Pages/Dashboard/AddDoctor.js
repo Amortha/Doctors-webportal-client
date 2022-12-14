@@ -6,7 +6,7 @@ import Loading from '../Shared/Loading';
 
 const AddDoctor = () => {
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
-    const { data: services, isLoading } = useQuery('service', () => fetch('http://localhost:5000/service').then(res => res.json()))
+    const { data: services, isLoading } = useQuery('service', () => fetch('https://doctor-webportal.onrender.com/service').then(res => res.json()))
     const imageStoragekey = 'd128a0195dc71bff09ae9c9f6cb99ba5';
 
 
@@ -32,7 +32,7 @@ const AddDoctor = () => {
                     }
            
                 //send to your database
-                fetch('http://localhost:5000/doctor',{
+                fetch('https://doctor-webportal.onrender.com/doctor',{
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json',
